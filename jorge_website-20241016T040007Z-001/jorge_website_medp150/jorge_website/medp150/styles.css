@@ -1,0 +1,144 @@
+/*psuedo-class matches root element of doc to the html file. defining
+custom properties such as setting colors to certain varaibles and setting a certain font size
+and this could be accessed all throughout the stylesheet*/
+
+/*used to define and manage css varaibles and convenient way to define varaibles globally*/
+:root{
+    --background-color: #fffdd0;
+    --link-color: #0077b5;
+    --box-color-background:#fff;
+    --hr-color: #a47f66;
+    --button-background-color: #4CAF50;
+}
+
+/*the star selector targets all elements on the page and is able to apply styles
+that are universally available to everyone or reset what was put in*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*this selector is used for global styles and affects the whole document
+and is used to directly style the <html> elements*/
+html{
+    scroll-behavior: smooth;
+}
+
+/*Assignment 1 section (first page section where all coding from first
+page goes and the second page is not effected unless called upon ) */
+
+
+.assignment-1-section{
+    background-color: var(--background-color); /*sets the back color using a css variable*/
+    font-family: 'Times New Roman', Times, serif; 
+    min-height: 100vh; /*setting the min height of the element, which
+    stands for 100% of the viewport, makes sure that the section is tall as the viewpoint
+    */
+    display: grid;/*changes the element to a grid container and allows for more control over the 
+    positioning of certain child elements */
+    place-content: center; /* centers whatever is in this section to the center of the grid*/
+    line-height: 26px; /* sets the height of each line and how far apart / seperated they look by 26 pixels*/
+}
+
+.assignment-1-section h2{
+    text-align: center;
+    margin: 10px;
+    /*sets the space around the area around the elements, its from (top, right, bottom left) */
+}
+
+.assignment-1-section hr{
+    width: 50%;  /* sets width to 50 percent of its container*/
+    margin: 0 auto; /*this automatically sets the top and bottom margins to 0 and the left and right margins to auto*/
+    height: 5px;
+    background-color: var(--hr-color) ;
+}
+
+.assignment-1-section .text{
+    margin-top: 10px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.assignment-1-section .border-box{
+    max-width: 800px;
+    width: 90%;
+    background-color: var(--box-color-background);
+    margin: 36px;
+    padding: 32px; /* adds space inside the elements, between the content and it's borders, setting the padding to 32 px sets it to top right bottom left*/
+    border-radius: 16px;
+    border: 15px solid var(--hr-color);
+    padding: 10px;
+    text-align: center;
+}
+
+.assignment-1-section .border-box a{
+    display: inline-block;
+    /*allows for the element to be in line with the others and not start on a new line
+    and you are able to set up the padding, width, height and other box properties when you
+    make it display as a block or inline-block
+    
+    it is ideal for structuring and controlling the spacing of the elements inside*/
+    padding: 10px 20px;
+    background-color:var(--button-background-color); /* Green background */
+    color: var(--box-color-background); /* White text */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px;
+    cursor: pointer; /* Pointer cursor */
+    margin-top: 20px; /* Space above the button */
+}
+
+
+/*Reading Assignment 1 section (first page section where all coding from the second page 
+goes and the first or other pages is not effected unless called upon on*/
+
+
+.response-1-section{
+    background-color: var(--background-color);
+    font-family: 'Times New Roman', Times, serif;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    line-height: 26px;
+}
+
+.response-1-section h2{
+    text-align: center;
+    margin: 10px;
+}
+
+.response-1-section hr{
+    width: 50%;
+    margin: 0 auto;
+    height: 5px;
+    background-color: var(--hr-color) ;
+}
+
+.response-1-section .text{
+    margin-top: 10px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.response-1-section .border-box{
+    max-width: 800px;
+    width: 90%;
+    background-color: var(--box-color-background);
+    margin: 36px;
+    padding: 32px;
+    border-radius: 16px;
+    border: 15px solid var(--hr-color);
+    padding: 10px;
+    text-align: center;
+}
+
+.response-1-section .border-box a{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color:var(--button-background-color); /* Green background */
+    color: var(--box-color-background); /* White text */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px;
+    cursor: pointer; /* Pointer cursor */
+    margin-top: 20px; /* Space above the button */
+}
